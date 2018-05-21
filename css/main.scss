@@ -1,0 +1,92 @@
+@import 'normalize';
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 170%;
+
+  code {
+    display: inline-block;
+    letter-spacing: 1px;
+    background-color: #F0F0F0;
+    font-family: "Comic Sans MS";
+    background: -webkit-linear-gradient(#f4b642, #f441d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Código de la tabla aquí */
+.Filter input{
+  background: transparent;
+  padding: 5px;
+  color: green;
+  border: 1px solid green;
+  margin-bottom: 15px;
+  outline: none;
+}
+button{
+  background: transparent;
+  padding: 5px;
+  color: green;
+  border: 1px solid green;
+  margin-right: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+  button:hover{
+    background: green;
+    color: #fff;
+  }
+  button:focus{
+    outline: none;
+  }
+
+table{
+  margin-top: 10px;
+  tbody tr{
+    transition: 0.5s;
+  }
+
+  $colors: #efeff4, #fff;
+  $color-hover: green, orange;
+
+  @for $i from 1 through length($colors) {
+  	tr:nth-child(#{length($colors)}n+#{$i}) {
+  		background: nth($colors, $i);
+  	}
+  }
+  @for $i from 1 through length($color-hover) {
+  	tbody tr:hover:nth-child(#{length($color-hover)}n+#{$i}) {
+  		background: nth($color-hover, $i);
+  	}
+  }
+  input{
+    background: transparent;
+    border: none;
+    padding: 10px;
+    text-align: center;
+  }
+  input:focus{
+    outline: none;
+  }
+  tr td:nth-child(3) input {
+    text-align: right;
+    font-family: 'Anonymous Pro', monospace;
+    color: green;
+  }
+  tr:nth-child(1) td:nth-child(3) input{
+    color: red;
+  }
+  tr:nth-child(6) td:nth-child(3) input{
+    color: red;
+  }
+  tr, th, tr, td{
+    border: 1px solid #000;
+  }
+  button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: green;
+    margin: 0;
+  }
+}
