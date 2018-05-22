@@ -12,6 +12,7 @@ class EmployeeRow extends Component {
       <tr className="EmployeeRow">
         <EditCell
           updateTable={this.props.updateTable}
+          readOnly={this.props.readOnly}
           dataTable={{
             type: "name",
             value: this.props.employee.name,
@@ -29,6 +30,7 @@ class EmployeeRow extends Component {
         />
         <EditCell
           updateTable={this.props.updateTable}
+          readOnly={this.props.readOnly}
           dataTable={{
             type: "salary",
             value: formatNumber(this.props.employee.salary),
@@ -37,6 +39,7 @@ class EmployeeRow extends Component {
         />
         <EditCell
           updateTable={this.props.updateTable}
+          readOnly={this.props.readOnly}
           dataTable={{
             type: "age",
             value: this.props.employee.age,
@@ -45,6 +48,7 @@ class EmployeeRow extends Component {
         />
         <EditCell
           updateTable={this.props.updateTable}
+          readOnly={this.props.readOnly}
           dataTable={{
             "type": "phone",
             value: this.props.employee.phone,
@@ -53,6 +57,7 @@ class EmployeeRow extends Component {
         />
         <EditCell
           updateTable={this.props.updateTable}
+          readOnly={this.props.readOnly}
           dataTable={{
             type: "email",
             value: this.props.employee.email,

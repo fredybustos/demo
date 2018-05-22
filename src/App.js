@@ -25,6 +25,7 @@ class App extends Component {
     this.showEmployees = this.showEmployees.bind(this)
     this.formatNumber = this.formatNumber.bind(this)
     this.handleToUSD = this.handleToUSD.bind(this)
+    this.handleEditEmployee = this.handleEditEmployee.bind(this)
 
   }
   formatNumber (number) {
@@ -32,7 +33,6 @@ class App extends Component {
   }
 
   handleToUSD(){
-    let formatNumberTwo = this.formatNumberTwo
     let usd = this.state.usd
     let employees = this.state.employees.slice(0)
     if (this.state.isUSD){
@@ -57,6 +57,12 @@ class App extends Component {
 
   showEmployees(){
     console.log(this.state.employees);
+  }
+  handleEditEmployee(){
+    let read = this.state.readOnly
+    read = false
+
+    this.setState({readOnly: read})
   }
 
   handleUserInput(filterText) {
@@ -90,7 +96,7 @@ class App extends Component {
       name: ev.target.name,
       value: ev.target.value,
     }
-    let employess = this.state.employees.slice()
+    // let employess = this.state.employees.slice()
     let newEmployees = employees.map((employee)=>{
       for (var key in employee) {
         if (key == item.name && employee.id == item.id ){
@@ -111,6 +117,7 @@ class App extends Component {
           OnUserInput={this.handleUserInput}
         />
         <EmployeeTable
+          handleEditEmployee={this.handleEditEmployee}
           handleToUSD={this.handleToUSD}
           formatNumber={this.formatNumber}
           readOnly={this.state.readOnly}

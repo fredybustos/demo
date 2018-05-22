@@ -4,6 +4,7 @@ import EmployeeRow from './employeeRow.js'
 
 class EmployeeTable extends Component {
   render() {
+    let handleEditEmployee = this.props.handleEditEmployee
     let handleToUSD = this.props.handleToUSD
     let formatNumber= this.props.formatNumber
     let readOnly = this.props.readOnly
@@ -16,6 +17,7 @@ class EmployeeTable extends Component {
       }
       return(
         <EmployeeRow
+          handleEditEmployee={handleEditEmployee}
           handleToUSD={handleToUSD}
           formatNumber={formatNumber}
           readOnly={readOnly}
@@ -29,7 +31,7 @@ class EmployeeTable extends Component {
     return(
       <section>
         <button type="button" onClick={this.props.addRow}>Agregar Empleado</button>
-        <button type="button">Editar Empleado</button>
+        <button type="button" onClick={this.props.handleEditEmployee}>Editar Empleado</button>
         <table>
           <thead>
             <tr>
