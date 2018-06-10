@@ -18,21 +18,21 @@ class App extends Component {
       isUSD: false
     }
 
-    this.handleAddEmployee = this.handleAddEmployee.bind(this)
-    this.handleRemoveEmployee = this.handleRemoveEmployee.bind(this)
-    this.handleEmployeeTable = this.handleEmployeeTable.bind(this)
-    this.handleUserInput = this.handleUserInput.bind(this)
-    this.showEmployees = this.showEmployees.bind(this)
-    this.formatNumber = this.formatNumber.bind(this)
-    this.handleToUSD = this.handleToUSD.bind(this)
-    this.handleEditEmployee = this.handleEditEmployee.bind(this)
+    // this.handleAddEmployee = this.handleAddEmployee.bind(this)
+    // this.handleRemoveEmployee = this.handleRemoveEmployee.bind(this)
+    // this.handleEmployeeTable = this.handleEmployeeTable.bind(this)
+    // this.handleUserInput = this.handleUserInput.bind(this)
+    // this.showEmployees = this.showEmployees.bind(this)
+    // this.formatNumber = this.formatNumber.bind(this)
+    // this.handleToUSD = this.handleToUSD.bind(this)
+    // this.handleEditEmployee = this.handleEditEmployee.bind(this)
 
   }
   formatNumber (number) {
     return new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number)
   }
 
-  handleToUSD(){
+  handleToUSD = () => {
     let usd = this.state.usd
     let employees = this.state.employees.slice(0)
     if (this.state.isUSD){
@@ -55,27 +55,25 @@ class App extends Component {
     })
   }
 
-  showEmployees(){
-    console.log(this.state.employees);
-  }
-  handleEditEmployee(){
+  showEmployees = () => console.log(this.state.employees)
+  handleEditEmployee = () => {
     let read = this.state.readOnly
     read = false
 
     this.setState({readOnly: read})
   }
 
-  handleUserInput(filterText) {
+  handleUserInput = (filterText) => {
     this.setState({
       filterText: filterText
     })
   }
-  handleRemoveEmployee(employee){
+  handleRemoveEmployee = (employee) => {
     var index = this.state.employees.indexOf(employee)
     this.state.employees.splice(index, 1)
     this.setState(employees: employees)
   }
-  handleAddEmployee(ev){
+  handleAddEmployee = (ev) => {
     let id = (+ new Date() + Math.floor(Math.random()));
     let employee = {
       id: id,
@@ -90,7 +88,7 @@ class App extends Component {
     this.setState({employees})
   }
 
-  handleEmployeeTable(ev){
+  handleEmployeeTable = (ev) => {
     let item = {
       id: ev.target.id,
       name: ev.target.name,
