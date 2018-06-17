@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Filter extends Component {
-  handleChange(){
-    this.props.OnUserInput(this.refs.filterTextInput.value)
+  handleChange() {
+    this.props.OnUserInput(this.refs.filterTextInput.value);
   }
   render() {
-    return(
+    return (
       <div className="Filter">
         <input
           type="text"
@@ -15,8 +15,8 @@ class Filter extends Component {
           onChange={this.handleChange.bind(this)}
         />
       </div>
-    )
+    );
   }
 }
 
-export default Filter
+export default Filter;
