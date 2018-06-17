@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function EditCell(props) {
-  return(
+  return (
     <td className="EditCell">
       <input
         type="text"
@@ -12,6 +12,6 @@ function EditCell(props) {
         readOnly={props.readOnly}
       />
     </td>
-  )
+  );
 }
-export default EditCell
+export default EditCell;

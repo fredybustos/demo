@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
-import EditCell from './editCell.js'
-
+import React, { Component } from 'react';
+import EditCell from './editCell.js';
 
 class EmployeeRow extends Component {
-  onDeleteRow(){
-    this.props.onDeleteRow(this.props.employee)
+  onDeleteRow() {
+    this.props.onDeleteRow(this.props.employee);
   }
   render() {
-    let formatNumber = this.props.formatNumber
-    return(
+    let formatNumber = this.props.formatNumber;
+    return (
       <tr className="EmployeeRow">
         <EditCell
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            type: "name",
+            type: 'name',
             value: this.props.employee.name,
             id: this.props.employee.id,
           }}
@@ -23,56 +22,55 @@ class EmployeeRow extends Component {
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            type: "company",
+            type: 'company',
             value: this.props.employee.company,
-            id: this.props.employee.id
+            id: this.props.employee.id,
           }}
         />
         <EditCell
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            type: "salary",
+            type: 'salary',
             value: formatNumber(this.props.employee.salary),
-            id: this.props.employee.id
+            id: this.props.employee.id,
           }}
         />
         <EditCell
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            type: "age",
+            type: 'age',
             value: this.props.employee.age,
-            id: this.props.employee.id
+            id: this.props.employee.id,
           }}
         />
         <EditCell
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            "type": "phone",
+            type: 'phone',
             value: this.props.employee.phone,
-            id: this.props.employee.id
+            id: this.props.employee.id,
           }}
         />
         <EditCell
           updateTable={this.props.updateTable}
           readOnly={this.props.readOnly}
           dataTable={{
-            type: "email",
+            type: 'email',
             value: this.props.employee.email,
-            id: this.props.employee.id
+            id: this.props.employee.id,
           }}
         />
         <td>
-          <button
-            type="button"
-            onClick={this.onDeleteRow.bind(this)}
-            >borrar</button>
+          <button type="button" onClick={this.onDeleteRow.bind(this)}>
+            borrar
+          </button>
         </td>
       </tr>
-    )
+    );
   }
 }
 
-export default EmployeeRow
+export default EmployeeRow;

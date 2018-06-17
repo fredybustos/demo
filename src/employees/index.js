@@ -6,7 +6,7 @@ let employees = [
     salary: 5400,
     age: 57,
     phone: '(886) 271 4211',
-    email: 'eduardo@gmail.com'
+    email: 'eduardo@gmail.com',
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ let employees = [
     salary: 11000,
     age: 40,
     phone: '(197) 651 8811',
-    email: 'miguel@gmail.com'
+    email: 'miguel@gmail.com',
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ let employees = [
     salary: 16900,
     age: 34,
     phone: '(396) 702 3554',
-    email: 'mariana@gmail.com'
+    email: 'mariana@gmail.com',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ let employees = [
     salary: 17700,
     age: 41,
     phone: '(542) 591 3978',
-    email: 'alejandro@gmail.com'
+    email: 'alejandro@gmail.com',
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ let employees = [
     salary: 10100,
     age: 65,
     phone: '(783) 560 4847',
-    email: 'gabriela@gmail.com'
+    email: 'gabriela@gmail.com',
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ let employees = [
     salary: 6500,
     age: 27,
     phone: '(862) 721 8605',
-    email: 'alejandra@gmail.com'
+    email: 'alejandra@gmail.com',
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ let employees = [
     salary: 14000,
     age: 38,
     phone: '(973) 322 3993',
-    email: 'juan@gmail.com'
+    email: 'juan@gmail.com',
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ let employees = [
     salary: 20400,
     age: 50,
     phone: '(226) 806 3427',
-    email: 'jose@gmail.com'
+    email: 'jose@gmail.com',
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ let employees = [
     salary: 23700,
     age: 29,
     phone: '(907) 702 7639',
-    email: 'maria@gmail.com'
+    email: 'maria@gmail.com',
   },
   {
     id: 9,
@@ -87,8 +87,8 @@ let employees = [
     salary: 33800,
     age: 23,
     phone: '(248) 255 7702',
-    email: 'adriana@gmail.com'
-  }
-]
+    email: 'adriana@gmail.com',
+  },
+];
 
-export default employees
+export default employees;
